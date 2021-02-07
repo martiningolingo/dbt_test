@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: sndw
+    description: 'This is Social Native DW'
+    database: sndw
+    schema: sn_mysql
+    tables:
+      - name: brands
+      - name: brands_campaign
+
+version: 2
+
+models:
+  - name: campaigns
+    description: example of campaign by brand
+    columns:
+      - name: brand_id
+      - name: brand_name
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
+      - name: campaign_name
+      - name: start_dt

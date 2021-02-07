@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   first_project:
       # Applies to all files under models/example/
-      example:
-          materialized: view
+      martins_playground:
+          materialized: table
+          +schema: martins_playground
